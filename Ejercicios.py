@@ -1,10 +1,7 @@
-"""--------- Ejercicio 3 -----------"""
+"""--------- Ejercicio 4 -----------"""
 
-#3. Si hay operadores de igual precedencia, en qué orden se ejecutan?
+#Que son las expresiones regulares en Python?
 
-#A. De izquierda a derecha
-#B. De derecha a izquierda
-
-print("Los operadores de igual procedencia se ejecutan de izquierda a derecha ")
+print("Las expresiones son combinaciones de constantes, variables, símbolos y paréntesis, que arrojan un valor tal y como se conocen en la notación traducuinal de las matemáticas")
 
 """ ------------------------------- """
