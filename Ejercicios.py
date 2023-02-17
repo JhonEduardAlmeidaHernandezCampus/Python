@@ -1,15 +1,28 @@
-"""--------- Ejercicio 8 -----------"""
+"""--------- Ejercicio 9 -----------"""
 
-#Escriba un bloque cualquiera de código en Python en donde utilice 2 condicionales (if) anidados.
+# Construya un algoritmo en Python, que permita ingresar la
+# información de un empleado e imprima el nombre, los apellidos y la antigüedad. 
+# Los datos que se deben solicitar
+# son los siguientes:
+#* Nombre 
+#* Teléfono 
+#* Año de ingreso a la empresa
+#* Apellidos 
+#* Edad.
 
-edad = int(input("Escribe tu edad: "))
-grupo = input("Escribe a que grupo quieres pertenecer [A o B]: ")
+nombre = input("Digite su nombre ")
+apellido = input("Digite su apellido ")
+edad = input("Digite su edad ")
+telefono = int(input("Digite su numero de teléfono "))
+ingreso = int(input("Digite el año en el que ingreso a la empresa "))
+actual = 2023
+antiguedad = actual - ingreso
 
-if edad >= 18 and grupo == "A" or grupo == "B":
-	print(f"Puedes entrar al grupo {grupo}")
-elif edad < 18 and grupo == "A" or grupo == "B":
-	print(f"No puedes entrar al grupo {grupo} si eres menor de edad")
+if ingreso <= 2022:
+    print("Su nombre es ", nombre, apellido, "Y lleva ", antiguedad, " años en la empresa")
+elif ingreso == 2023:
+    print("Su nombre es ", nombre, apellido, "Y lleva menos de un año en la empresa")
 else:
-	print("Elección no válida")
+    print("Año en el que ingreso a la empresa incorrecto")
 
 """ ------------------------------- """
