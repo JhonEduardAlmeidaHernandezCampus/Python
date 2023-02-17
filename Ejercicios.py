@@ -1,17 +1,8 @@
-"""--------- Ejercicio 1 -----------"""
-#1. Qué operadores utiliza Python en los siguientes casos:
+"""--------- Ejercicio 2 -----------"""
 
-#A. División Modular                %
-#B. Exponenciación                  **
-#C. División que retorne entero.    //
+#2. En la jerarquía de operadores, cuáles son los que más
+#   prioridad tienen cuando el intérprete de Python los evalúa?
 
-print("División modular % \nExponenciación ** \nDivisión que retorne entero //")
-
-numero1 = int(input(f" \t 1. -> Digite un numero: "))
-numero2 = int(input(f" \t 2. -> Digite un numero: "))
-
-print(f"La división modular de {numero1} % {numero2} = {numero1 % numero2}") 
-print(f"La exponenciación de {numero1} ** {numero2} = {numero1 ** numero2}") 
-print(f"La división de {numero1} // {numero2} = {numero1 // numero2}") 
+print("Operaciones entre parentesis \t\t\t\t\t\t () \nPotencia \t\t\t\t\t\t\t\t ** \nMultiplicación y División, módulo o residuo, División entenera       *, /, %, // \nSuma y resta \t\t\t\t\t\t\t\t+, -")
 
 """ ------------------------------- """
