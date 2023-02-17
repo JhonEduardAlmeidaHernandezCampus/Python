@@ -1,22 +1,13 @@
-"""--------- Ejercicio 5 -----------"""
+"""--------- Ejercicio 6 -----------"""
 
-#Enumere 5 tipos de datos en Python y suministre un valor de ejemplo de cada uno.
-#int         5
-#float       3.1416
-#bool        True and False
-#str         Jhon Almeida
-#list        [1, "Jhon", 3, 19, "Bicicleta"]
+#En sus propias palabras, qué son las funciones preconstruidas y proporcione 2 ejemplos.
 
-int = 5
-float = 3.1416
-bool = False
-str = "Jhon Almeida"
-list = [1, "Jhon", 3, 19, "Bicicleta"]
+lista = [1, 54, 'Jhon']
+lista2 = [2, 14, 1, 9, 0, 3]
+resultado = min(lista2)
 
-print(f"Esto es un dato tipo Entero: {int}")
-print(f"Esto es un dato tipo Float: {float}")
-print(f"Esto es un dato tipo Booleano: {bool}")
-print(f"Esto es un dato tipo Cadena: {str}")
-print(f"Esto es un dato tipo Secuencia o Lista: {list}") 
+print("Son funciones que ya vienen integradas en Python, como por ejemplo:")
+print("-> List = Las listas \n-> Print = Imprimir por pantalla el argumento que le pasemos \n-> Min = Determina el numero menor en una lista de numeros")
+print(f"-> Ejemplos: \n Listas: {lista} \n Min = {resultado} lista de ejemplo: {lista2}") 
 
 """ ------------------------------- """
