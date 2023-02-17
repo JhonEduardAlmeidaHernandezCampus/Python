@@ -1,146 +1,87 @@
-"""--------- Ejercicio 10 -----------"""
+""" ------- Skill Review Funciones ------- """
 
-# En su casa le solicitan que realice un algoritmo en Python,
-# que permita calcular el valor a pagar por concepto de
-# energía eléctrica. Los datos que se conocen son los
-# siguientes:
+""" ---------- Ejercicio 1 ----------- """
 
-# estrato
-# - Mes de consumo
-# Valor kw
-# -Total kw consumido en el mes 
+#1. Campus requiere administrar algunos datos de sus Campers
+#como por ejemplo, la creación, eliminación o búsqueda de los
+#developers, entre otros, por tal razón, ha solicitado el diseño de
+#un programa que cuente con el siguiente menú como panel de
+#control:
 
-# 656,34 pesos colombianos por kWh
+# 1. CREAR GRUPO ARTEMIS:
+# 1.1 LISTAR CAMPERS DE ARTEMIS 
+# 1.2 AGREGAR CAMPERS A ARTEMIS 
+# 1.3 ELIMINAR CAMPERS DE ARTEMIS
+# 1.4 ORDENAR ALFABETICAMENTE EN LISTA DE ARTEMIS
+# 1.5 BUSCAR CAMPER EN LISTA DE ARTEMIS
+# 2. CREAR GRUPO SPUTNIK:
+# 2.1 LISTAR CAMPERS DE SPUTNIK
+# 2.2 AGREGAR CAMPERS A SPUTNIK
+# 2.3 ELIMINAR CAMPERS DE SPUTNIK
+# 2.4 ORDENAR ALFABETICAMENTE EN LISTA DE SPUTNIK
+# 2.5 BUSCAR CAMPER EN LISTA DE SPUTNIK
+# Digite opcion:
 
-kh = 656.34
-salir = exit
+grupo1 = "Artemis"
+lista = ["Manuel", "Santiago", "Ricardo", "Sofia", "Samuel", "Antonio", "Carmen"]
+lista2 = ["Fabian", "Miguel", "Mariana", "Jessica", "Samuel", "Carlos", "Silvia"]
+grupo2 = "Sputnik"
 
-descuento1 = 16.486
-descuento2 = 12.256
-descuento3 = 6.342
+print(f"-------------------------------- MENU -----------------------------------")
+print(f"|\t\t\t\t\t\t\t\t\t|")
+print(f"|\t-> 1. CREAR GRUPO ARTEMIS: \t\t\t\t\t|\n|\t-> 1.1 LISTAR CAMPERS DE ARTEMIS: \t\t\t\t|\n|\t-> 1.2 AGREGAR CAMPERS A ARTEMIS: \t\t\t\t|\n|\t-> 1.3 ELIMINAR CAMPERS DE ARTEMIS: \t\t\t\t| \n|\t-> 1.4 ORDENAR ALFABETICAMENTE EN LISTA DE ARTEMIS: \t\t|\n|\t-> 1.5 BUSCAR CAMPER EN LISTA DE ARTEMIS: \t\t\t|\n|\t-> 2. CREAR GRUPO SPUTNIK: \t\t\t\t\t|\n|\t-> 2.1 LISTAR CAMPERS DE SPUTNIK: \t\t\t\t| \n|\t-> 2.2 AGREGAR CAMPERS A SPUTNIK: \t\t\t\t|\n|\t-> 2.3 ELIMINAR CAMPERS DE SPUTNIK \t\t\t\t|\n|\t-> 2.4 ORDENAR ALFABETICAMENTE EN LISTA DE SPUTNIK \t\t|\n|\t-> 2.5 BUSCAR CAMPER EN LISTA DE SPUTNIK \t\t\t|\n|\t\t\t\t\t\t\t\t\t|")
 
-print(f"    --------------------------------------------------")
-print(f"\t    1. Ingresar ingresar al sistema \n \t\t\t2. Salir")
-print(f"    --------------------------------------------------")
-ingreso = int(input(f"\t\t\t    "))
+opciones = float(input(f"|\t-> Digite una opción: \t\t\t\t\t\t| \n------------------------------------------------------------------------- \n|\t-> "))
 
+if opciones == 1:
+    print(f"\t ° El grupo {grupo1} ha sido creado satisfactoriamente")
 
-if ingreso == 1:
-    print(f"    ------------------------------------------------------")
-    print("    El valor de kilowatts/h es de 656,34 pesos colombianos")
-    print(f"    ------------------------------------------------------")
-    
-    
-    print(f"    ---------------------")
-    estrato = int(input("    -> Digite su estrato: "))
-    print(f"    ---------------------")
-    
-    if estrato == 1:
+elif opciones == 1.1:
+    print(f"\t ° {lista}")
 
-        print(f"    -------------------------------------------")
-        mes = (input("    -> Escriba el mes en que se facturo el recibo: "))
-        print(f"    -------------------------------------------")
-    
-        print(f"    -----------------------------------------------")
-        K = int(input("    -> Digite cuantos kilowatts consumio en el mes: "))
-        print(f"    -----------------------------------------------")
+elif opciones == 1.2:
+    agregar = input(f"\t ° Digite el nombre que quiere agregar a la lista de Artemis: ")
+    lista.append(agregar)
+    print(f"\t ° El listado de Artemis consta de los siguientes integrantes: {lista}")
 
+elif opciones == 1.3:
+    eliminar = int(input(f"\t ° Digite el ID del camper que se encuentra en Artemis que quiere eliminar: "))
+    lista.pop(eliminar)
+    print(f"\t ° El listado de Artemis consta de los siguientes integrantes: {lista}")
 
-        costo = kh * K - descuento1
+elif opciones == 1.4:
+    lista.sort()
+    print(f"\t ° El listado de Artemis quedo ordenado de la siguiente manera: {lista}")
 
-        print(f"    ------------------------------------------------------------------")
-        print(f"         Por ser estrato 1 usted obtiene un descuento de ${descuento1} pesos")
-        total = print(f"          -> El total a pagar en el mes de {mes} es de ${costo:.2f}")
-        print(f"    ------------------------------------------------------------------")
-        
-    elif estrato == 2:
-        
-        print(f"    -------------------------------------------")
-        mes = (input("    -> Escriba el mes en que se facturo el recibo: "))
-        print(f"    -------------------------------------------")
+elif opciones == 1.5:
+    buscar = int(input(f"\t ° Digite el ID del camper que se encuentra en Artemis que quiere buscar: "))
+    print(f"\t ° El camper de Artemis con ese ID es: {lista[buscar]}")
 
-        print(f"    -----------------------------------------------")
-        K = int(input("    -> Digite cuantos kilowatts consumio en el mes: "))
-        print(f"    -----------------------------------------------")
+if opciones == 2:
+    print(f"\t ° El grupo {grupo2} ha sido creado satisfactoriamente")
 
-        costo = kh * K - descuento2
+elif opciones == 2.1:
+    print(f"\t ° {lista2}")
 
-        print(f"    ------------------------------------------------------------------")
-        print(f"         Por ser estrato 2 usted obtiene un descuento de ${descuento2} pesos")
-        total = print(f"          -> El total a pagar en el mes de {mes} es de ${costo:.2f}")
-        print(f"    ------------------------------------------------------------------")
-        
-    elif estrato == 3:
+elif opciones == 2.2:
+    agregar = input(f"\t ° Digite el nombre que quiere agregar a la lista de Sputnik: ")
+    lista2.append(agregar)
+    print(f"\t ° El listado de Sputnik consta de los siguientes integrantes: {lista2}")
 
-        print(f"    -------------------------------------------")
-        mes = (input("    -> Escriba el mes en que se facturo el recibo: "))
-        print(f"    -------------------------------------------")
+elif opciones == 2.3:
+    eliminar = int(input(f"\t ° Digite el ID del camper que se encuentra en Sputnik que quiere eliminar: "))
+    lista2.pop(eliminar)
+    print(f"\t ° El listado de Sputnik consta de los siguientes integrantes: {lista2}")
 
-        print(f"    -----------------------------------------------")
-        K = int(input("    -> Digite cuantos kilowatts consumio en el mes: "))
-        print(f"    -----------------------------------------------")
+elif opciones == 2.4:
+    lista2.sort()
+    print(f"\t ° El listado de Sputnik quedo ordenado de la siguiente manera: {lista2}")
 
-        costo = kh * K - descuento3
+elif opciones == 2.5:
+    buscar = int(input(f"\t ° Digite el ID del camper que se encuentra en Sputnik que quiere buscar: "))
+    print(f"\t ° El camper de Sputnik con ese ID es: {lista2[buscar]}")
 
-        print(f"    ------------------------------------------------------------------")
-        print(f"         Por ser estrato 3 usted obtiene un descuento de ${descuento3} pesos")
-        total = print(f"          -> El total a pagar en el mes de {mes} es de ${costo:.2f}")
-        print(f"    ------------------------------------------------------------------")
-            
-    elif estrato == 4:
-    
-        print(f"    -------------------------------------------")
-        mes = (input("    -> Escriba el mes en que se facturo el recibo: "))
-        print(f"    -------------------------------------------")
-        
-        print(f"    -----------------------------------------------")
-        K = int(input("    -> Digite cuantos kilowatts consumio en el mes: "))
-        print(f"    -----------------------------------------------")
+else:
+    print(f"\t ° Esta opción no es valida")
 
-        costo = kh * K
-
-        print(f"    ------------------------------------------------------------------")
-        total = print(f"          -> El total a pagar en el mes de {mes} es de ${costo:.2f}")
-        print(f"    ------------------------------------------------------------------")
-        
-    elif estrato == 5:
-        
-        print(f"    -------------------------------------------")
-        mes = (input("    -> Escriba el mes en que se facturo el recibo: "))
-        print(f"    -------------------------------------------")
-
-        print(f"    -----------------------------------------------")
-        K = int(input("    -> Digite cuantos kilowatts consumio en el mes: "))
-        print(f"    -----------------------------------------------")
-
-        costo = kh * K
-
-        print(f"    ------------------------------------------------------------------")
-        total = print(f"          -> El total a pagar en el mes de {mes} es de ${costo:.2f}")
-        print(f"    ------------------------------------------------------------------")
-        
-    elif estrato == 6:
-        
-        print(f"    -------------------------------------------")
-        mes = (input("    -> Escriba el mes en que se facturo el recibo: "))
-        print(f"    -------------------------------------------")
-
-        print(f"    -----------------------------------------------")
-        K = int(input("    -> Digite cuantos kilowatts consumio en el mes: "))
-        print(f"    -----------------------------------------------")
-
-        costo = kh * K
-
-        print(f"    ------------------------------------------------------------------")
-        total = print(f"          -> El total a pagar en el mes de {mes} es de ${costo:.2f}")
-        print(f"    ------------------------------------------------------------------")
-        
-    else: 
-        print("Solo hay hasta estrato nivel 6")
-
-elif ingreso == 2:
-    print(salir)
-else: 
-    print("El dato no es valido")
-
-""" ------------------------------- """
+""" ---------------------------------- """
